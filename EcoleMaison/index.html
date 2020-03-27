@@ -20,7 +20,18 @@
 	    
 	  </div>
 	</main>
-	<footer></footer>
+	<footer>
+	    <div>
+    <h3 id="add">Ajoute Des Fichiers</h3>
+  </div>
+	  <form action="/api/tablo" method="post" enctype="multipart/form-data">
+      <label>Matiere: </label><select id="selecmat" ></select>
+      <label>Categorie: </label><select id="seleccat">
+	    </select>
+	    <label>Fichier joint: <input type="file" id="file" ></label>
+	    <button type="submit" >Envoyer</button>
+	  </form>
+	</footer>
 	<script type="text/javascript" src="JS/cours.js"></script>
 </body>
 

@@ -3,7 +3,7 @@
 
 /*Affiche le contenu de la page d'acceuil, pour modifier le contenu, il faut modifier le tableau "let cours"*/
 
-function acceuil(){
+function accueil(){
 let affichage = document.getElementById('page');
   
   //tableau listant les cours à afficher
@@ -19,7 +19,6 @@ let affichage = document.getElementById('page');
     lien.href = "deux.html?matiere="+cours[i];
     let menu = document.createElement('li');
     menu.setAttribute("class","btn-menu");
-     menu.setAttribute("class","btn-menu");
     let titre = document.createElement('h2');
     titre.textContent= cours[i] ;
     titre.id= cours[i];
@@ -32,9 +31,21 @@ let affichage = document.getElementById('page');
    affichage.appendChild(navigation);
     navigation.appendChild(list);
 
+  /* function en test de mofification du menu depuis une interphase utilisateur. 
+  
+function affichFormu(){
+let selecmat = document.getElementById('selecmat');
+  for (i=0;i<cours.length;i++){
+    let opt = document.createElement('option');
+    opt.id=cours[i];
+    opt.textContent=cours[i];
+      selecmat.appendChild(opt);
+  }
+}
+ affichFormu(); 
+  */
  };
-//evenemrnt load sur la page pour lancer automatiquement le chargement.
-window.addEventListener('load',acceuil());
 
-
+//evenement load sur la page pour lancer automatiquement le chargement.
+window.addEventListener('load',accueill());
 

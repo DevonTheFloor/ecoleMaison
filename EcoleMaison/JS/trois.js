@@ -33,7 +33,7 @@ function listing() {
     case "ChimieCorrection":
       tablo = ["paracetamolCorrection.pdf", "comment_faire_du_savon.pdf"];
       break;
-    default:
+
 //============ANGLAIS
     case "AnglaisDevoir":
       tablo = ["fichier_test.pdf","AnglaisDevoir.pdf", "quoi_faire.pdf"];
@@ -48,8 +48,18 @@ function listing() {
 //====================MATHS
 //================= GEOGRAPHIE
 //=====================HISTOIRE
+//======================SVT
+	case "SVTCours" :
+	tablo = ["Cours_immuno4.pdf"];
+	break;	
+	case "SVTDevoir" :
+	tablo = ["keude"];
+	break;	
+	case "SVTCorrection" :
+	tablo = ["keude"];
+	break;	
       
-      
+    default:    
       //message de controle, s'affiche dans la console en cas d'erreur
       console.log("Probleme! Y a pas de tablo!");
   }
