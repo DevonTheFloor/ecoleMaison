@@ -1,0 +1,33 @@
+{
+  "name": "ecolemaison",
+  "version": "1.0.0",
+  "description": "app web stand aolone pour gérer les devoir à la maison pendant le confinement",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevonTheFloor/ecoleMaison.git"
+  },
+  "keywords": [
+    "ecole",
+    "maison",
+    "school",
+    "home",
+    "devoir",
+    "task"
+  ],
+  "author": "Oim n I",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevonTheFloor/ecoleMaison/issues"
+  },
+  "homepage": "https://github.com/DevonTheFloor/ecoleMaison#readme",
+  "dependencies": {
+    "write": "^2.0.0"
+  }
+}

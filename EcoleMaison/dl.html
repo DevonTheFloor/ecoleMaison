@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Liste des Cours</title>
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Example description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <style>
+      #a{
+        display: none;
+      }
+    </style>
+    <nav class="listeCours">
+      <ul id="suite">
+        <li><label>Cours de:</label> <input type="text" name="cours" id="cours"></li>
+      </ul>
+    </nav>
+    <button id="add" >Ajoutez un Cours</button><br><br>
+    <a href="" id="a" download>Cliquez sur ce lien pour Télécharger la liste des cours</a>
+    <button id="create">Créer Liste</button>
+  </main>
+  <footer></footer>
+  <!-- Fichier JS actif, evite d'avoir plusieurs fichiers à transmettre-->
+  <script type="text/javascript">
+    let add = document.getElementById('add');
+    add.addEventListener("click",function() {
+      let suite = document.getElementById('suite');
+      let ajout = document.createElement('li');
+      let label = document.createElement('label');
+      label.textContent = "Cours de : ";
+      let input = document.createElement('input');
+      input.setAttribute("type","text");
+      input.id= "cours";
+      suite.appendChild(ajout);
+      ajout.appendChild(label);
+      label.appendChild(input);
+      console.log("ajoutation de cours");
+    });
+
+    function telecharger() {
+      let create = document.getElementById('create');
+      let cours = document.getElementById('cours');
+      let contenu = "<li>"+cours.value+"</li>";
+      let nom = "listreCours.txt";
+      let type = "text/plain";
+      console.log("apres déclaration");
+
+      console.log("contenu : " + contenu);
+      console.log("nom : " + nom);
+      console.log("type : " + type)
+      var a = document.getElementById("a");
+      a.style.display = "block";
+      var file = new Blob([contenu], {
+        type: type
+      });
+      a.href = URL.createObjectURL(file);
+      a.download = nom;
+      console.log("nom de fichier : " + nom);
+    }
+
+
+
+    let message
+
+    create.addEventListener("click", telecharger);
+
+  </script>
+</body>
+
+</html>

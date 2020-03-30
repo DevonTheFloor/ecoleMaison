@@ -31,7 +31,7 @@ let affichage = document.getElementById('page');
    affichage.appendChild(navigation);
     navigation.appendChild(list);
 
-  /* function en test de mofification du menu depuis une interphase utilisateur. 
+  // function en test de mofification du menu depuis une interphase utilisateur. 
   
 function affichFormu(){
 let selecmat = document.getElementById('selecmat');
@@ -43,9 +43,9 @@ let selecmat = document.getElementById('selecmat');
   }
 }
  affichFormu(); 
-  */
+  
  };
 
 //evenement load sur la page pour lancer automatiquement le chargement.
-window.addEventListener('load',accueill());
+window.addEventListener('load',accueil());
 
